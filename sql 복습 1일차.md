@@ -1,7 +1,7 @@
 ```SQL
 select * from emp;
 ```
-####데이터 조회 가능
+#### 데이터 조회 가능
 - sql작업이며 누가 짜는냐에 따라 성능이 달라짐
 다른 언어는 성능이 크게 좌우되지 않지만 sql은 데이터 처리 시간이 달라짐 
 
@@ -10,14 +10,14 @@ select * from emp;
 ```SQL
 desc emp;
 ```
-####데이터 타입 확인 가능
+#### 데이터 타입 확인 가능
 
 ---
 ```SQL
 select empno, ename, SAL, sal*1.1, 1111, 'abcd'
 from emp;
 ```
-####표현식: column명을 제외한 나머지 
+#### 표현식: column명을 제외한 나머지 
 
 - 1111,'abcd'는 표현식으로써 규격에 맞게 모두 출력됨
 
@@ -72,7 +72,7 @@ select *
 from student
 where grade=4 and studno=9411; 
 ```
-####where절 구문 : 행을 선택하기 위한 조건 나열
+#### where절 구문 : 행을 선택하기 위한 조건 나열
 
 - where name='서재수' 
   - 서재수가 싱글따옴표가 없다면 컬럼명으로 해석됨, 문자나 날짜 상수를 표현할 떄 '  ' 사용
@@ -86,7 +86,7 @@ select *
 from EMP
 where sal between 2000 and 3000;
 ```
-####between A and B: A 이상 B 이하 범위 선택
+#### between A and B: A 이상 B 이하 범위 선택
 - between은 제한조건을 포함!
 
 ---
@@ -95,7 +95,7 @@ select *
 from student
 where grade in(1,2);
 ```
-####in연산자: A 또는 B 또는 C ...
+#### in연산자: A 또는 B 또는 C ...
 
 ---
 ```SQL
@@ -103,7 +103,7 @@ select *
 from EMP
 where ename like 'S%';
 ```
-####like 연산자: 패턴연산자
+#### like 연산자: 패턴연산자
 - where ename like '_A%'
   - 두번째 시작이 A
 - where ename like '_ A _ _' 
@@ -126,7 +126,7 @@ where comm is not null; -- where comm is null;
 - null은 공간을 차지하지 않는 데이터로 size가 없음, 아직 입력되지 않은 데이터
 
 ---
-####참고
+#### 참고
 ```SQL
 select *
 from EMP;
