@@ -154,7 +154,7 @@ from student;
 select 'abcda', translate('abcda','!ac','!') 
 from dual;
 => bd
--------------------------------------------------
+--------------------------------------------------
 select 'abcda', translate('abcda','ac','') 
 from dual;
 => ''
