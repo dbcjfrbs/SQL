@@ -138,7 +138,7 @@ select 'abcda', replace('abcda','a','A'),
         translate('abcda','ab','AB')
 from dual;  
 =>  abcda | AbcdA | AbcdA | ABcda | ABcdA
---------------------------------------------------
+---------------------------------------------------
 select translate('055)381-2158',')-','  ')
 from student; 
 => 055)381-2158 | 055 381 2158
