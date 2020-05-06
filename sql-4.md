@@ -1,5 +1,6 @@
 ```sql
 # deptno가 10인 직원중 job이 clerk인 직원은 A부서 
+
   나머지는 B부서 20인 직원은 C부서, 30인 직원은 D부서로 이동  
 
 select ename, job, deptno, 
