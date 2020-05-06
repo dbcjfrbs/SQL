@@ -1,4 +1,4 @@
-```
+```sql
 # deptno가 10인 직원중 job이 clerk인 직원은 A부서 
   나머지는 B부서 20인 직원은 C부서, 30인 직원은 D부서로 이동  
 
@@ -12,7 +12,7 @@ select ename, job, deptno,
 - 내부 decode 가능
 - 조건은 등호가 성립하는 것만 가능하며 콤마(,)로 구분해 명시
 -------------------------------------------------
-```
+```sql
 1)
 select deptno, case when deptno=10 then 'A' 
                     when deptno=20 then 'B' 
@@ -27,14 +27,12 @@ from emp;
 
 => 같은 결과
 ```
-#### case when 조건1 then 치환1
-####------- when 조건2 then 치환2... 
-####------- else 'else치환값' end
+#### case when 조건1 then 치환1 when 조건2 then 치환2... else 'else치환값' end
 - 2에서 case와 when 바로 뒤의 데이터 타입이 서로 같아야 함  
 - 성능은 case문이 decode보다 좋음  =>why? 찾아볼께요ㅠㅠ
 - 조건에 등호가 아닌 대소비교도 가능 
 ------------------------------------------------
-```
+```sql
 select count(*),count(empno),count(comm) --comm에 속한 null은 세지않음
 from emp;
 
@@ -44,13 +42,13 @@ from emp;
 - emp 테이블이 가지는 행의 갯수가 14라는 단일 값 한 건으로 출력됨 
 - *는 정확하지만 속도가 느려 한 컬럼에만 적용하는게 성능이 좋음
 ------------------------------------------------
-```
+```sql
 select sum(sal),sum(comm) -- null값 제외하고 계산 
 from emp;
 ```
 #### sum: 합
 -----------------------------------------------
-```
+```sql
 select avg(comm),sum(comm)/count(*),avg(nvl(comm,0))
 from emp;
 
@@ -59,13 +57,13 @@ from emp;
 #### avg: 평균
 - count, sum과 마찬가지로 null값 제외하고 계산함
 ------------------------------------------------
-```
+```sql
 select min(sal), max(sal)  
 from emp;
 ```
 #### max/min: 최대/최소
 ------------------------------------------------
-```
+```sql
 1)
 select deptno, max(sal) 
 from EMP 
@@ -85,7 +83,7 @@ group by grade,
 - select 절 이전에 group by가 먼저 수행되는 query임
 - 2코드처럼 2차적으로 grouping 가능
 -----------------------------------------------
-```
+```sql
 # query 수행 순서**
 
 --select          --5 출력하고
@@ -110,7 +108,7 @@ having avg(sal)>=2500;
 ```
 #### having 절: group by 연산 결과에 조건 추가 시 사용
 **[참고]** 
-```
+```sql
 1)
 select deptno, avg(sal)
 from EMP
